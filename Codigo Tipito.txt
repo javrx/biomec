@@ -1,0 +1,54 @@
+%% Graficacion de un movimiento
+figure1 = figure('Color',[1 1 1]);
+grid on;
+%axis equal;
+
+
+title('Marcadores para un Movimiento');
+
+for i = Eventos.RHS_Frame(1) : 30 : Eventos.LHS_Frame(2)
+
+
+   
+    %hold on;
+    %Miembro superior
+    plot3([DatosMarcadores.Filtrados.r_should(i,1) DatosMarcadores.Filtrados.c7(i,1)],[DatosMarcadores.Filtrados.r_should(i,2) DatosMarcadores.Filtrados.c7(i,2)],[DatosMarcadores.Filtrados.r_should(i,3) DatosMarcadores.Filtrados.c7(i,3)],'g');
+    hold on;
+    axis equal;
+    plot3([DatosMarcadores.Filtrados.r_should(i,1) DatosMarcadores.Filtrados.rGr(i,1)],[DatosMarcadores.Filtrados.r_should(i,2) DatosMarcadores.Filtrados.rGr(i,2)],[DatosMarcadores.Filtrados.r_should(i,3) DatosMarcadores.Filtrados.rGr(i,3)],'g');
+    plot3([DatosMarcadores.Filtrados.l_should(i,1) DatosMarcadores.Filtrados.lGr(i,1)],[DatosMarcadores.Filtrados.l_should(i,2) DatosMarcadores.Filtrados.lGr(i,2)],[DatosMarcadores.Filtrados.l_should(i,3) DatosMarcadores.Filtrados.lGr(i,3)],'g');
+    plot3([DatosMarcadores.Filtrados.l_should(i,1) DatosMarcadores.Filtrados.c7(i,1)],[DatosMarcadores.Filtrados.l_should(i,2) DatosMarcadores.Filtrados.c7(i,2)],[DatosMarcadores.Filtrados.l_should(i,3) DatosMarcadores.Filtrados.c7(i,3)],'g');
+    
+    plot3([DatosMarcadores.Filtrados.r_should(i,1) DatosMarcadores.Filtrados.l_should(i,1)],[DatosMarcadores.Filtrados.r_should(i,2) DatosMarcadores.Filtrados.l_should(i,2)],[DatosMarcadores.Filtrados.r_should(i,3) DatosMarcadores.Filtrados.l_should(i,3)],'g');
+    
+    plot3([DatosMarcadores.P15(i,1) DatosMarcadores.Filtrados.c7(i,1)],[DatosMarcadores.P15(i,2) DatosMarcadores.Filtrados.c7(i,2)],[DatosMarcadores.P15(i,3) DatosMarcadores.Filtrados.c7(i,3)],'g');
+    
+    % Cadera
+    plot3([DatosMarcadores.P15(i,1) DatosMarcadores.P07(i,1)],[DatosMarcadores.P15(i,2) DatosMarcadores.P07(i,2)],[DatosMarcadores.P15(i,3) DatosMarcadores.P07(i,3)],'g');
+    plot3([DatosMarcadores.P14(i,1) DatosMarcadores.P15(i,1)],[DatosMarcadores.P14(i,2) DatosMarcadores.P15(i,2)],[DatosMarcadores.P14(i,3) DatosMarcadores.P15(i,3)],'g');
+    plot3([DatosMarcadores.P07(i,1) DatosMarcadores.P14(i,1)],[DatosMarcadores.P07(i,2) DatosMarcadores.P14(i,2)],[DatosMarcadores.P07(i,3) DatosMarcadores.P14(i,3)],'g'); 
+    
+    %Pierna Derecha
+    plot3([DatosMarcadores.P07(i,1) DatosMarcadores.P05(i,1)],[DatosMarcadores.P07(i,2) DatosMarcadores.P05(i,2)],[DatosMarcadores.P07(i,3) DatosMarcadores.P05(i,3)],'b');
+    plot3([DatosMarcadores.P05(i,1) DatosMarcadores.P03(i,1)],[DatosMarcadores.P05(i,2) DatosMarcadores.P03(i,2)],[DatosMarcadores.P05(i,3) DatosMarcadores.P03(i,3)],'b');
+    
+    %Pie Derecho
+    plot3([DatosMarcadores.P02(i,1) DatosMarcadores.P01(i,1)],[DatosMarcadores.P02(i,2) DatosMarcadores.P01(i,2)],[DatosMarcadores.P02(i,3) DatosMarcadores.P01(i,3)],'b');
+    plot3([DatosMarcadores.P03(i,1) DatosMarcadores.P02(i,1)],[DatosMarcadores.P03(i,2) DatosMarcadores.P02(i,2)],[DatosMarcadores.P03(i,3) DatosMarcadores.P02(i,3)],'b');
+    plot3([DatosMarcadores.P01(i,1) DatosMarcadores.P03(i,1)],[DatosMarcadores.P01(i,2) DatosMarcadores.P03(i,2)],[DatosMarcadores.P01(i,3) DatosMarcadores.P03(i,3)],'b'); 
+    
+    %Pierna Izquierda
+    plot3([DatosMarcadores.P14(i,1) DatosMarcadores.P12(i,1)],[DatosMarcadores.P14(i,2) DatosMarcadores.P12(i,2)],[DatosMarcadores.P14(i,3) DatosMarcadores.P12(i,3)],'r');
+    plot3([DatosMarcadores.P12(i,1) DatosMarcadores.P10(i,1)],[DatosMarcadores.P12(i,2) DatosMarcadores.P10(i,2)],[DatosMarcadores.P12(i,3) DatosMarcadores.P10(i,3)],'r');
+ 
+    %Pie Izquierdo
+    plot3([DatosMarcadores.P09(i,1) DatosMarcadores.P08(i,1)],[DatosMarcadores.P09(i,2) DatosMarcadores.P08(i,2)],[DatosMarcadores.P09(i,3) DatosMarcadores.P08(i,3)],'r');
+    plot3([DatosMarcadores.P10(i,1) DatosMarcadores.P09(i,1)],[DatosMarcadores.P10(i,2) DatosMarcadores.P09(i,2)],[DatosMarcadores.P10(i,3) DatosMarcadores.P09(i,3)],'r');
+    plot3([DatosMarcadores.P08(i,1) DatosMarcadores.P10(i,1)],[DatosMarcadores.P08(i,2) DatosMarcadores.P10(i,2)],[DatosMarcadores.P08(i,3) DatosMarcadores.P10(i,3)],'r'); 
+    
+    %pause(0.05);
+    %hold off
+   
+    
+end
+    
